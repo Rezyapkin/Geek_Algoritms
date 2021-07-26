@@ -20,4 +20,8 @@ for i in range(n):
 
     array[i].append(current_sum)
 
-print(array)
+for i in range(n):
+    s = ""
+    for j in range(m):
+        s += f'{array[i][j]:5} '
+    print(s)

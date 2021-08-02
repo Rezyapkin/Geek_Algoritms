@@ -46,9 +46,9 @@ def find_simple_with_eratosthenes(i):
     return value if index == i else None
 
 start_time = time.time()
-print(find_simple_without_eratosthenes(10000))
+print(find_simple_without_eratosthenes(1000))
 second_time = time.time()
-print(find_simple_with_eratosthenes(10000))
+print(find_simple_with_eratosthenes(1000))
 end_time = time.time()
 
 print(f'Без Решета Эратосфена со сложностью O(n^2): {second_time - start_time}')

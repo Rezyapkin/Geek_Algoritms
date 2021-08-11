@@ -10,11 +10,10 @@ def merge_sort(input_list, start=0, stop=-1):
     if stop == - 1:
         stop = len(input_list) - 1
 
-    n = stop - start
-    if n < 1:
+    if start >= stop:
         return input_list
 
-    middle = n // 2
+    middle = (stop - start) // 2
     merge_sort(input_list, start, start + middle)
     merge_sort(input_list, start + middle + 1, stop)
 

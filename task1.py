@@ -11,11 +11,11 @@ import hashlib
 s = 'helloworldhello'
 n = len(s)
 result = {}
-for i in range(0, n):
+for i in range(n):
     for j in range (1, n - i + 1):
         subs = s[i:(j+i)]
         h_subs = hashlib.sha1(subs.encode('utf-8')).hexdigest()
-        if not h_subs in result:
+        if h_subs not in result:
             result[h_subs] = subs
 
 print(len(result))
